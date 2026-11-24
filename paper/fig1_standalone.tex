@@ -1,0 +1,20 @@
+\documentclass[border=3pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\input{numbers.tex}
+\begin{document}
+\begin{tikzpicture}[font=\footnotesize, box/.style={draw, rounded corners=2pt, align=center, inner sep=2.5pt},
+  arr/.style={-{Latex[length=1.6mm]}, thin}]
+\node[box, text width=4.0cm] (hbm) {\textbf{HBM}: about 1~TB of KV state;\\least recently used block leaves};
+\node[box, text width=4.0cm, below=0.42cm of hbm] (dram) {\textbf{Host DRAM}: 1--4~TB\\first in, first out\\\TDramMs{}~ms per block; no wear};
+\node[box, text width=4.0cm, below=0.42cm of dram] (adm) {\textbf{Admission policy}:\\write the block to flash, or drop it};
+\node[box, text width=1.9cm, below=0.42cm of adm, xshift=-1.1cm] (hbf) {\textbf{HBF log}\\8 stacks\\\THbfUs{}--\THbfOneUs{}~$\mu$s per block\\wears on each write};
+\node[box, text width=1.9cm, below=0.42cm of adm, xshift=1.1cm] (ssd) {\textbf{or SSD pool}\\32 drives\\\TDramMs{}~ms per block\\wears on each write};
+\node[box, text width=2.2cm, right=0.3cm of dram] (rec) {\textbf{Recompute}\\\TRecMs{}~ms per block at the start of a prompt};
+\draw[arr] (hbm) -- node[right, font=\tiny]{evict} (dram);
+\draw[arr] (dram) -- node[right, font=\tiny]{evict} (adm);
+\draw[arr] (adm.south) -- (hbf.north);
+\draw[arr] (adm.south) -- (ssd.north);
+\draw[arr, dashed] (hbm.east) -| node[above, pos=0.25, font=\tiny]{miss everywhere} (rec.north);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,108 @@
+{
+ "models": {
+  "Llama-3.1-70B": {
+   "block_bytes": 167772160,
+   "write_all_bytes_per_day": 513124608245760.0,
+   "tiers": {
+    "recompute (depth 0)": {
+     "fetch_s": 0.06426168888888889
+    },
+    "host DRAM over PCIe": {
+     "fetch_s": 0.002663050158730159
+    },
+    "SSD, one drive": {
+     "fetch_s": 0.02097152
+    },
+    "SSD, striped (PCIe-bound)": {
+     "fetch_s": 0.002663050158730159
+    },
+    "HBF, one stack": {
+     "fetch_s": 0.0001048576
+    },
+    "HBF, four stacks": {
+     "fetch_s": 2.62144e-05
+    }
+   },
+   "ssd_wear_residence_s": {
+    "1 DWPD": 86400.0,
+    "3 DWPD": 28800.0
+   },
+   "ssd_budget_share": {
+    "1 DWPD": 0.062363019597519796,
+    "3 DWPD": 0.18708905879255938
+   },
+   "hbf": {
+    "slc": {
+     "wear_residence_s": 1577.88,
+     "capacity_residence_s": 740.5437440595123,
+     "budget_share": 0.4693283038377521
+    },
+    "tlc": {
+     "wear_residence_s": 52596.0,
+     "capacity_residence_s": 2221.631232178537,
+     "budget_share": 0.04223954734539769
+    },
+    "qlc": {
+     "wear_residence_s": 157788.0,
+     "capacity_residence_s": 2962.174976238049,
+     "budget_share": 0.018773132153510085
+    }
+   },
+   "value_vs_recompute_s": 0.06423547448888889,
+   "value_vs_dram_s": 0.002636835758730159,
+   "recompute_over_dram_value": 24.360817421492815
+  },
+  "DeepSeek-V3": {
+   "block_bytes": 35979264,
+   "write_all_bytes_per_day": 110040492146688.0,
+   "tiers": {
+    "recompute (depth 0)": {
+     "fetch_s": 0.03367822222222222
+    },
+    "host DRAM over PCIe": {
+     "fetch_s": 0.0005710994285714286
+    },
+    "SSD, one drive": {
+     "fetch_s": 0.004497408
+    },
+    "SSD, striped (PCIe-bound)": {
+     "fetch_s": 0.0005710994285714286
+    },
+    "HBF, one stack": {
+     "fetch_s": 2.248704e-05
+    },
+    "HBF, four stacks": {
+     "fetch_s": 5.62176e-06
+    }
+   },
+   "ssd_wear_residence_s": {
+    "1 DWPD": 86400.0,
+    "3 DWPD": 28800.0
+   },
+   "ssd_budget_share": {
+    "1 DWPD": 0.29080204364537765,
+    "3 DWPD": 0.872406130936133
+   },
+   "hbf": {
+    "slc": {
+     "wear_residence_s": 1577.88,
+     "capacity_residence_s": 3453.194466386459,
+     "budget_share": 2.188502589795459
+    },
+    "tlc": {
+     "wear_residence_s": 52596.0,
+     "capacity_residence_s": 10359.583399159377,
+     "budget_share": 0.19696523308159133
+    },
+    "qlc": {
+     "wear_residence_s": 157788.0,
+     "capacity_residence_s": 13812.777865545837,
+     "budget_share": 0.08754010359181837
+    }
+   },
+   "value_vs_recompute_s": 0.03367260046222222,
+   "value_vs_dram_s": 0.0005654776685714286,
+   "recompute_over_dram_value": 59.54717990418547
+  }
+ }
+}

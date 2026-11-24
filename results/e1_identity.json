@@ -1,0 +1,86 @@
+{
+ "life_days": 1826.25,
+ "stacks": 8,
+ "write_all_bytes_per_day": {
+  "Llama-3.1-70B": 513124608245760.0,
+  "DeepSeek-V3": 110040492146688.0
+ },
+ "modes": {
+  "slc": {
+   "label": "SLC",
+   "capacity_per_stack_bytes": 549755813888.0,
+   "pe": 100000,
+   "residence_s_waf1": 1577.88,
+   "residence_s_waf2": 3155.76,
+   "dwpd_waf1": 54.757015742642025,
+   "lifetime_bytes_per_stack": 5.49755813888e+16,
+   "slc_lifetime_bytes_ratio": 1.0,
+   "node_budget_bytes_per_day": 240823902045393.56,
+   "budget_share_Llama-3.1-70B": 0.4693283038377521,
+   "write_all_life_years_Llama-3.1-70B": 2.3466415191887604,
+   "budget_share_DeepSeek-V3": 2.188502589795459,
+   "write_all_life_years_DeepSeek-V3": 10.942512948977296
+  },
+  "pslc_low": {
+   "label": "pSLC (20K)",
+   "capacity_per_stack_bytes": 549755813888.0,
+   "pe": 20000,
+   "residence_s_waf1": 7889.400000000001,
+   "residence_s_waf2": 15778.800000000001,
+   "dwpd_waf1": 10.951403148528405,
+   "lifetime_bytes_per_stack": 1.099511627776e+16,
+   "slc_lifetime_bytes_ratio": 5.0,
+   "node_budget_bytes_per_day": 48164780409078.71,
+   "budget_share_Llama-3.1-70B": 0.09386566076755042,
+   "write_all_life_years_Llama-3.1-70B": 0.4693283038377521,
+   "budget_share_DeepSeek-V3": 0.4377005179590918,
+   "write_all_life_years_DeepSeek-V3": 2.1885025897954593
+  },
+  "pslc_high": {
+   "label": "pSLC (30K)",
+   "capacity_per_stack_bytes": 549755813888.0,
+   "pe": 30000,
+   "residence_s_waf1": 5259.599999999999,
+   "residence_s_waf2": 10519.199999999999,
+   "dwpd_waf1": 16.42710472279261,
+   "lifetime_bytes_per_stack": 1.649267441664e+16,
+   "slc_lifetime_bytes_ratio": 3.3333333333333335,
+   "node_budget_bytes_per_day": 72247170613618.06,
+   "budget_share_Llama-3.1-70B": 0.14079849115132562,
+   "write_all_life_years_Llama-3.1-70B": 0.7039924557566282,
+   "budget_share_DeepSeek-V3": 0.6565507769386376,
+   "write_all_life_years_DeepSeek-V3": 3.2827538846931885
+  },
+  "tlc": {
+   "label": "TLC",
+   "capacity_per_stack_bytes": 1649267441664.0,
+   "pe": 3000,
+   "residence_s_waf1": 52596.0,
+   "residence_s_waf2": 105192.0,
+   "dwpd_waf1": 1.6427104722792607,
+   "lifetime_bytes_per_stack": 4947802324992000.0,
+   "slc_lifetime_bytes_ratio": 11.11111111111111,
+   "node_budget_bytes_per_day": 21674151184085.42,
+   "budget_share_Llama-3.1-70B": 0.04223954734539769,
+   "write_all_life_years_Llama-3.1-70B": 0.21119773672698844,
+   "budget_share_DeepSeek-V3": 0.19696523308159133,
+   "write_all_life_years_DeepSeek-V3": 0.9848261654079565
+  },
+  "qlc": {
+   "label": "QLC",
+   "capacity_per_stack_bytes": 2199023255552.0,
+   "pe": 1000,
+   "residence_s_waf1": 157788.0,
+   "residence_s_waf2": 315576.0,
+   "dwpd_waf1": 0.5475701574264202,
+   "lifetime_bytes_per_stack": 2199023255552000.0,
+   "slc_lifetime_bytes_ratio": 25.0,
+   "node_budget_bytes_per_day": 9632956081815.742,
+   "budget_share_Llama-3.1-70B": 0.018773132153510085,
+   "write_all_life_years_Llama-3.1-70B": 0.09386566076755042,
+   "budget_share_DeepSeek-V3": 0.08754010359181837,
+   "write_all_life_years_DeepSeek-V3": 0.43770051795909176
+  }
+ },
+ "kv_ratio_llama_over_dsv3": 4.663052647581275
+}
